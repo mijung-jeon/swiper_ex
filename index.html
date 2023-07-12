@@ -10,15 +10,69 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body>
+    <h1>DCODELAB</h1>
     <main>
         <section class="swiper-wrapper">
-            <article class="swiper-slide">1</article>
-            <article class="swiper-slide">2</article>
-            <article class="swiper-slide">3</article>
-            <article class="swiper-slide">4</article>
-            <article class="swiper-slide">5</article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic1.png" alt="pic1">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, doloremque.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic2.png" alt="pic2">
+                        <h2>Pariatur dolor in possimus.</h2>
+                        <p>Natus sequi quo voluptatibus, ullam eius id minus ut perspiciatis.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic3.png" alt="pic3">
+                        <h2>Amet velit dolorem cupiditate.</h2>
+                        <p>Tenetur culpa nesciunt ullam inventore hic dolor accusamus id quidem?</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic4.png" alt="pic4">
+                        <h2>Sint nam pariatur optio.</h2>
+                        <p>Eius assumenda iure excepturi officia fugit dolores omnis odit ex.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic5.png" alt="pic5">
+                        <h2>Quisquam earum maiores et?</h2>
+                        <p>Voluptatem vero doloremque incidunt magni voluptas voluptatum! Deleniti, a necessitatibus.</p>
+                    </div>
+                </div>
+            </article>
         </section>
+
+        <nav class="swiper-pagination"></nav>
+
+        <nav class="swiper-button-prev navi"></nav>
+        <nav class="swiper-button-next navi"></nav>
     </main>
+
+    <footer>
+        2022 DCODELAB &copy; ALL RIGHTS RESERVED.
+    </footer>
 
     <script>
         // 기본 스와이퍼 연결 법
@@ -30,6 +84,22 @@
             slidesPerView: "auto", //숫자(해당갯수 단위로 패널 보임), "auto" : 100%, 특정크기 지정
             spaceBetween: 30, //패널사이 간격(px)
             centeredSlides: true, //활성화 패널을 항상 가로 가운대 배치
+            pagination: {
+                el: ".swiper-pagination", //페이지네이션 버튼 추가
+                // clickable: true //클릭 가능 여부 설정
+                type: "fraction"
+            },
+            navigation: {
+                prevEl : ".swiper-button-prev",
+                nextEl : ".swiper-button-next"
+            },
+            effect: "coverflow",
+            coverflowEffect : {
+                rotate: 50, //y축 회정 각도
+                stretch: -100, //당겨짐 정도
+                depth: 400, //입체적인 왜곡 효과 정도
+                slideShadows: false //패널 그림자 설정
+            }
         });
     </script>
 </body>
